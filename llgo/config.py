@@ -1,3 +1,7 @@
+# 域名
+DOMAIN = 'https://www.lagou.com'
+
+# 起始地址池
 START_URLS = {
     '技术': {
         '后端开发': {
@@ -165,7 +169,7 @@ START_URLS = {
             'APP设计师': 'https://www.lagou.com/zhaopin/APPshejishi/%s',
             'UI设计师': 'https://www.lagou.com/zhaopin/UIshejishi/%s',
             '平面设计师': 'https://www.lagou.com/zhaopin/pingmianshejishi/%s',
-            '美术设计师（2D/3D）': 'https://www.lagou.com/zhaopin/meishushejishi%EF%BC%882D3D%EF%BC%89/%s',
+            '美术设计师': 'https://www.lagou.com/zhaopin/meishushejishi%EF%BC%882D3D%EF%BC%89/%s',
             '广告设计师': 'https://www.lagou.com/zhaopin/guanggaoshejishi/%s',
             '多媒体设计师': 'https://www.lagou.com/zhaopin/duomeitishejishi/%s',
             '原画师': 'https://www.lagou.com/zhaopin/yuanhuashi/%s',
@@ -187,13 +191,13 @@ START_URLS = {
             '游戏数值策划': 'https://www.lagou.com/zhaopin/youxishuzhicehua/%s'
         },
         '高端职位': {
-            '设计经理/主管': 'https://www.lagou.com/zhaopin/shejijinglizhuguan/%s',
+            '设计经理': 'https://www.lagou.com/zhaopin/shejijinglizhuguan/%s',
             '设计总监': 'https://www.lagou.com/zhaopin/shejizongjian/%s',
-            '视觉设计经理/主管': 'https://www.lagou.com/zhaopin/shijueshejijinglizhuguan/%s',
+            '视觉设计经理': 'https://www.lagou.com/zhaopin/shijueshejijinglizhuguan/%s',
             '视觉设计总监': 'https://www.lagou.com/zhaopin/shijueshejizongjian/%s',
-            '交互设计经理/主管': 'https://www.lagou.com/zhaopin/jiaohushejijinglizhuguan/%s',
+            '交互设计经理': 'https://www.lagou.com/zhaopin/jiaohushejijinglizhuguan/%s',
             '交互设计总监': 'https://www.lagou.com/zhaopin/jiaohushejizongjian/%s',
-            '用户研究经理/主管': 'https://www.lagou.com/zhaopin/yonghuyanjiujinglizhuguan/%s'
+            '用户研究经理': 'https://www.lagou.com/zhaopin/yonghuyanjiujinglizhuguan/%s'
         }
     },
     '运营': {
@@ -233,7 +237,7 @@ START_URLS = {
         }
     },
     '市场': {
-        '市场/营销': {
+        '市场营销': {
             '市场营销': 'https://www.lagou.com/zhaopin/shichangshichangyingxiao1/%s',
             '市场策划': 'https://www.lagou.com/zhaopin/shichangcehua1/%s',
             '市场顾问': 'https://www.lagou.com/zhaopin/shichangguwen1/%s',
@@ -244,7 +248,7 @@ START_URLS = {
             '海外市场': 'https://www.lagou.com/zhaopin/haiwaishichang1/%s',
             '商务专员': 'https://www.lagou.com/zhaopin/shangwuzhuanyuan/%s'
         },
-        '媒介/公关': {
+        '媒介公关': {
             '政府关系': 'https://www.lagou.com/zhaopin/zhengfuguanxi1/%s',
             '品牌公关': 'https://www.lagou.com/zhaopin/pinpaigongguan1/%s',
             '广告协调': 'https://www.lagou.com/zhaopin/guanggaoxietiao/%s',
@@ -252,7 +256,7 @@ START_URLS = {
             '媒介合作': 'https://www.lagou.com/zhaopin/meijiehezuo/%s',
             '媒介顾问': 'https://www.lagou.com/zhaopin/meijieguwen/%s'
         },
-        '品牌/广告': {
+        '品牌广告': {
             '广告创意': 'https://www.lagou.com/zhaopin/guanggaochuangyi/%s',
             '广告制作': 'https://www.lagou.com/zhaopin/guanggaozhizuo/%s',
             '广告文案': 'https://www.lagou.com/zhaopin/guanggaowenan/%s',
@@ -264,7 +268,7 @@ START_URLS = {
             '品牌专员': 'https://www.lagou.com/zhaopin/pinpaizhuanyuan/%s',
             '美术指导': 'https://www.lagou.com/zhaopin/meishuzhidao/%s'
         },
-        '渠道/推广': {
+        '渠道推广': {
             '市场推广': 'https://www.lagou.com/zhaopin/shichangtuiguang1/%s',
             '渠道推广': 'https://www.lagou.com/zhaopin/qudaotuiguang1/%s',
             'SEO': 'https://www.lagou.com/zhaopin/SEO1/%s',
@@ -314,7 +318,7 @@ START_URLS = {
             '人力资源': 'https://www.lagou.com/zhaopin/renliziyuan1/%s',
             '招聘': 'https://www.lagou.com/zhaopin/zhaopin/%s',
             'HRBP': 'https://www.lagou.com/zhaopin/HRBP/%s',
-            '人事/HR': 'https://www.lagou.com/zhaopin/renshiHR/%s',
+            '人事HR': 'https://www.lagou.com/zhaopin/renshiHR/%s',
             '培训经理': 'https://www.lagou.com/zhaopin/peixunjingli/%s',
             '薪资福利经理': 'https://www.lagou.com/zhaopin/xinzifulijingli/%s',
             '绩效考核经理': 'https://www.lagou.com/zhaopin/jixiaokaohejingli/%s',
@@ -342,9 +346,9 @@ START_URLS = {
             '专利': 'https://www.lagou.com/zhaopin/zhuanli/%s'
         },
         '高端职位': {
-            '行政总监/经理': 'https://www.lagou.com/zhaopin/xingzhengzongjianjingli/%s',
-            '财务总监/经理': 'https://www.lagou.com/zhaopin/caiwuzongjianjingli/%s',
-            'HRD/HRM': 'https://www.lagou.com/zhaopin/HRDHRM/%s',
+            '行政总监': 'https://www.lagou.com/zhaopin/xingzhengzongjianjingli/%s',
+            '财务总监': 'https://www.lagou.com/zhaopin/caiwuzongjianjingli/%s',
+            'HRDHRM': 'https://www.lagou.com/zhaopin/HRDHRM/%s',
             'CFO': 'https://www.lagou.com/zhaopin/CFO/%s',
             'CEO': 'https://www.lagou.com/zhaopin/ceo/%s'
         }
@@ -378,7 +382,7 @@ START_URLS = {
             '游戏动效': 'https://www.lagou.com/zhaopin/youxidongxiao/%s',
             '游戏美工': 'https://www.lagou.com/zhaopin/youximeigong/%s'
         },
-        '运营/推广': {
+        '运营推广': {
             '游戏运营': 'https://www.lagou.com/zhaopin/youxiyunying1/%s',
             '游戏编辑': 'https://www.lagou.com/zhaopin/youxibianji/%s',
             '游戏推广': 'https://www.lagou.com/zhaopin/youxituiguang/%s',
@@ -394,3 +398,18 @@ START_URLS = {
         }
     }
 }
+
+# Xpath
+XPATH_JOBNAME = '/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/h2[1]/text()'
+XPATH_SALARY = '/html[1]/body[1]/div[5]/div[1]/div[1]/dd[1]/h3[1]/span[1]/text()'
+XPATH_LOCATION = '/html[1]/body[1]/div[5]/div[1]/div[1]/dd[1]/h3[1]/span[2]/text()'
+XPATH_EXPERIENCE = '/html[1]/body[1]/div[5]/div[1]/div[1]/dd[1]/h3[1]/span[3]/text()'
+XPATH_EDUCATION = '/html[1]/body[1]/div[5]/div[1]/div[1]/dd[1]/h3[1]/span[4]/text()'
+XPATH_ADVANTAGE = '/html[1]/body[1]/div[7]/div[1]/dl[1]/dd[1]/p[1]/text()'
+XPATH_DETAIL = '/html[1]/body[1]/div[7]/div[1]/dl[1]/dd[2]/div[1]/p/text()'
+XPATH_COMPANYNAME = '/html[1]/body[1]/div[7]/div[2]/dl[1]/dt[1]/a[1]/div[1]/h3[1]/em[1]/text()'
+XPATH_COMPANYFIELD = '/html[1]/body[1]/div[7]/div[2]/dl[1]/dd[1]/ul[1]/li[1]/h4[1]/text()'
+XPATH_FINANCING = '/html[1]/body[1]/div[7]/div[2]/dl[1]/dd[1]/ul[1]/li[2]/h4[1]/text()'
+XPATH_SCALE = '/html[1]/body[1]/div[7]/div[2]/dl[1]/dd[1]/ul[1]/li[3]/h4[1]/text()'
+
+# 数据库操作语句
