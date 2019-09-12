@@ -15,6 +15,11 @@ NEWSPIDER_MODULE = 'llgo.spiders'
 #    'llgo.middlewares.LlgoSpiderMiddleware': 543,
 #}
 
+# Enable or disable log
+LOG_LEVEL = 'INFO'
+LOG_ENABLED = True
+CONSOLE_STATUS = True
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 

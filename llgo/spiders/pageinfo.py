@@ -4,8 +4,9 @@
 import os
 import sys
 import json
+import time
 import scrapy
-
+sys.path.append('/home/mxsyx/desktop/llgo')
 from llgo import config
 from llgo.chrome import driver
 
@@ -26,9 +27,9 @@ class PageInfo():
       response = scrapy.http.HtmlResponse(
                 url, body=driver.page_source.encode('UTF-8'))
       self._parse_homepage(response)
-      print('解析完成：%s' % url)
       self._current_item = self._current_item + 1
-      yield 
+      print('解析完成：%s\n' % url)
+      self._request(start_url)
 
     def _check_content(self, response):
       """ 检测页面中是否存在有效内容（招聘列表），
@@ -40,6 +41,8 @@ class PageInfo():
     def _parse_homepage(self, response):
       """ 解析招聘信息主页地址，并将主页地址存储到文件中。"""
       if not self._check_content(response): # 到达链接末尾，退出程序
+        with open('ss.txt', 'w') as d:
+          d.write(response.body.decode('UTF-8'));
         self._task_completed()
       homepages = response.xpath(config.XPATH_HOMEPAGE).extract()
       with open(self._storage_dir + str(self._current_item), 'w') as f:
@@ -49,3 +52,8 @@ class PageInfo():
       """ 任务结束后做一些清理工作，并退出程序。"""
       self._driver.quit()
       sys.exit(0)
+
+
+if __name__ == "__main__":
+    pageinfo = PageInfo('技术','后端开发','Java')
+    pageinfo.start_crawl()
