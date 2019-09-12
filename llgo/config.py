@@ -400,6 +400,8 @@ START_URLS = {
 }
 
 # Xpath
+XPATH_CONTENT = '/html[1]/body[1]/div[5]/div[2]/div[1]/div[3]/ul[1]'
+XPATH_HOMEPAGE = '/html[1]/body[1]/div[5]/div[2]/div[1]/div[3]/ul[1]/li/div[1]/div[1]/div[1]/a[1]/@href'
 XPATH_JOBNAME = '/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/h2[1]/text()'
 XPATH_SALARY = '/html[1]/body[1]/div[5]/div[1]/div[1]/dd[1]/h3[1]/span[1]/text()'
 XPATH_LOCATION = '/html[1]/body[1]/div[5]/div[1]/div[1]/dd[1]/h3[1]/span[2]/text()'
