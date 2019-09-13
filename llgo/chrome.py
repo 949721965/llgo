@@ -11,3 +11,5 @@ options.add_argument('--disable-dev-shm-usage')
 options.add_argument('blink-settings=imagesEnabled=false')
 
 driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=options)
+
+

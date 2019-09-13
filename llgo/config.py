@@ -415,3 +415,13 @@ XPATH_FINANCING = '/html[1]/body[1]/div[7]/div[2]/dl[1]/dd[1]/ul[1]/li[2]/h4[1]/
 XPATH_SCALE = '/html[1]/body[1]/div[7]/div[2]/dl[1]/dd[1]/ul[1]/li[3]/h4[1]/text()'
 
 # 数据库操作语句
+
+
+# cookie
+COOKIE = [
+    {'name':'login', 'value':'true'},
+    {'name':'unick', 'value':'%E6%8B%89%E5%8B%BE%E7%94%A8%E6%88%B76703'},
+    {'name':'_putrc', 'value':'B8D0D8A14EC057D3123F89F2B170EADC'},
+    {'name':'gate_login_token', 'value':'b116ffc0cefcf418c4756ef09dc85db0ac15e9dbc06f544d9cc3ccdd55cb78f4'},
+    {'name':'LG_LOGIN_USER_ID', 'value':'1dfdee7b50f388035eaf8ed3f04ab3ed2f5ec7aac4907ef2b1d09d75bc936d9a'}
+]

@@ -7,6 +7,7 @@ import json
 import time
 import scrapy
 sys.path.append('/home/mxsyx/desktop/llgo')
+
 from llgo import config
 from llgo.chrome import driver
 
@@ -19,7 +20,13 @@ class PageInfo():
       self._storage_dir = 'urls/%s/%s/%s/' % (category, branch, position)
 
     def start_crawl(self):
+      self._driver.get(config.DOMAIN)
+      self._add_cookie()
       self._request(self._start_url)
+
+    def _add_cookie(self):
+      for cookie in config.COOKIE:
+        self._driver.add_cookie(cookie)
 
     def _request(self, start_url):
       url = start_url % self._current_item
@@ -31,20 +38,12 @@ class PageInfo():
       print('解析完成：%s\n' % url)
       self._request(start_url)
 
-    def _check_content(self, response):
-      """ 检测页面中是否存在有效内容（招聘列表），
-      当页面中不存在有效内容时将返回一个空列表。
-      """
-      result = response.xpath(config.XPATH_CONTENT).extract()
-      return len(result)
 
     def _parse_homepage(self, response):
       """ 解析招聘信息主页地址，并将主页地址存储到文件中。"""
-      if not self._check_content(response): # 到达链接末尾，退出程序
-        with open('ss.txt', 'w') as d:
-          d.write(response.body.decode('UTF-8'));
-        self._task_completed()
       homepages = response.xpath(config.XPATH_HOMEPAGE).extract()
+      if not len(homepages):
+        self._task_completed()
       with open(self._storage_dir + str(self._current_item), 'w') as f:
         json.dump(homepages, f)
 
