@@ -7,7 +7,7 @@ import json
 import time
 import scrapy
 sys.path.append('/home/mxsyx/desktop/llgo')
-
+os.chdir('')
 from llgo import config
 from llgo.chrome import driver
 
